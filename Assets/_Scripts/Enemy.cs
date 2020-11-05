@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float health = 100f;
-    public float lookRadius = 10f;
+    public float lookRadius = 20f;
     public float damage = 5f;
 
     Transform target;
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject,6f);
             
         }
-    }
+    } 
 
     void OnEnable()
     {
@@ -89,5 +89,12 @@ public class Enemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+    void OnTriggerEnter(Collider other)
+    {
+
+        Debug.Log("Hitting something ");
+        Debug.Log(other);
+         
     }
 }

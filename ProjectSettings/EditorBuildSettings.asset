@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu.unity
     guid: 4f772625d01ddeb43950dad4ac08df49
   - enabled: 1
-    path: Assets/Desert Environment/Survival.unity
+    path: Assets/_Scenes/Survival.unity
     guid: c150696d1445fe94889bb45f7d0901a0
   m_configObjects: {}
