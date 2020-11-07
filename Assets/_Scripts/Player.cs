@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     public GameObject deathCam;
     public GameObject ui, diedUI;
     public GameObject song;
+    private Rigidbody m_RigidBody;
+
+    public static float jumpForce = 50f; 
     public void DamageTaken(float dmg)
     {
         health -= dmg;
@@ -30,14 +33,16 @@ public class Player : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        m_RigidBody = GetComponent<Rigidbody>();
+
         song.GetComponent<AudioSource>().Play();
         hp.text = "LIFE: " + health;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
 
 
@@ -54,5 +59,11 @@ public class Player : MonoBehaviour
         }
         healthBar.GetComponent<HealthBar>().SetHealth(health / 100);
         hp.text = "LIFE: " + health;
+    }
+    public void JumpHigher ()
+    {
+        m_RigidBody.drag = 0f;
+        m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
+        m_RigidBody.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
     }
 }

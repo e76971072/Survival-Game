@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GenerateEnemies : MonoBehaviour
 {
-    public GameObject Enemy, enemy2, enemy3, powerup, powerup2, powerup3;
+    public GameObject Enemy, enemy2, enemy3, powerup, powerup2, powerup3, jumpHigher;
     int enemyCount;
     public float xPos;
     public float zPos;
@@ -53,7 +53,7 @@ public class GenerateEnemies : MonoBehaviour
             zPos = Random.Range(-13, -28);
 
             Instantiate(powerup2, new Vector3(xPos, 1, zPos), Quaternion.identity);
-
+            Instantiate(jumpHigher, new Vector3(xPos + 10, 1, zPos + 2 ), Quaternion.identity);
             powerUps = 3;
         }
 
@@ -64,6 +64,8 @@ public class GenerateEnemies : MonoBehaviour
             Debug.Log("Made Health");
             Instantiate(powerup3, new Vector3(xPos, .5f, zPos), Quaternion.identity);
         }
+
+        
 
         while (enemyCount < enems - 2)
         {

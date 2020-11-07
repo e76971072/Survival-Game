@@ -20338,7 +20338,7 @@ GameObject:
   - component: {fileID: 392358136}
   - component: {fileID: 392358135}
   m_Layer: 0
-  m_Name: Spawn
+  m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20363,6 +20363,7 @@ MonoBehaviour:
   powerup2: {fileID: 6300444545278479527, guid: 3355c1d4c2e61f54a936c816a49391c0,
     type: 3}
   powerup3: {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc, type: 3}
+  jumpHigher: {fileID: 1000013317980782, guid: 2cf6690298568294cb6b655c0a3aeb87, type: 3}
   xPos: 0
   zPos: 0
   enems: 10
@@ -42137,7 +42138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800356372}
   m_LocalRotation: {x: 0.28345153, y: 0.86988586, z: -0.20030653, w: 0.3504729}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -55, y: 69, z: -96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1816402097}
@@ -74260,7 +74261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285876541}
   m_LocalRotation: {x: 0.44756478, y: 0.48373216, z: -0.7502182, w: 0.053495202}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 17, y: 19, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1816402097}

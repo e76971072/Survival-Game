@@ -121,7 +121,12 @@ public class InventorySwitching : MonoBehaviour
                 other.GetComponent<Player>().health = 100f;
                 Destroy(gameObject);
             }
-        }
+            if (gameObject.name.Equals("Bottle_Mana") || gameObject.name.Equals("Bottle_Mana(Clone)"))
+            {
+                other.GetComponent<Player>().health += 100; 
+                Destroy(gameObject);
+            }
+    }
 
         void SelectInventory()
         {
