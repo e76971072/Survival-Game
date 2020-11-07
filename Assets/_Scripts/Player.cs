@@ -39,6 +39,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        if ( transform.position.y < 0  ) 
+        {
+            Destroy(gameObject);
+            deathCam.SetActive(true);
+            ui.SetActive(false);
+            diedUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            song.GetComponent<AudioSource>().Stop();
+
+        }
         healthBar.GetComponent<HealthBar>().SetHealth(health / 100);
         hp.text = "LIFE: " + health;
     }
