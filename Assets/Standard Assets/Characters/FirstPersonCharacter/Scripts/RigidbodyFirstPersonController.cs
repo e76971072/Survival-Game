@@ -8,7 +8,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+        public static float JumpForce = 20f;
+
         [Serializable]
+      
         public class MovementSettings
         {
             public float ForwardSpeed = 8.0f;   // Speed when walking forward
@@ -16,7 +19,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float RunMultiplier = 2.0f;   // Speed when sprinting
 	        public KeyCode RunKey = KeyCode.LeftShift;
-            public  float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
@@ -166,7 +168,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {
                     m_RigidBody.drag = 0f;
                     m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
-                    m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
+                    Debug.Log("Jump" + JumpForce); 
+                    m_RigidBody.AddForce(new Vector3(0f,  JumpForce, 0f), ForceMode.Impulse);
                     m_Jumping = true;
                 }
 
@@ -261,5 +264,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jumping = false;
             }
         }
+    }
+    class SubOverride: RigidbodyFirstPersonController
+    {
+        public void Reset()
+        {
+            JumpForce = 100f; 
+        }
+
     }
 }

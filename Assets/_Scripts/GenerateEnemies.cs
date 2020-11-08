@@ -53,8 +53,11 @@ public class GenerateEnemies : MonoBehaviour
             zPos = Random.Range(-13, -28);
 
             Instantiate(powerup2, new Vector3(xPos, 1, zPos), Quaternion.identity);
-            Instantiate(jumpHigher, new Vector3(xPos + 10, 1, zPos + 2 ), Quaternion.identity);
             powerUps = 3;
+            Instantiate(jumpHigher, new Vector3(xPos + 10, .2f, zPos), Quaternion.identity);
+            Instantiate(powerup3, new Vector3(xPos, .5f, zPos), Quaternion.identity);
+
+
         }
 
         if (powerUps == 3)
@@ -72,6 +75,7 @@ public class GenerateEnemies : MonoBehaviour
             xPos = Random.Range(16, 33);
             zPos = Random.Range(-35, -4);
             Instantiate(Enemy, new Vector3(xPos, 2, zPos), Quaternion.identity);
+
             yield return new WaitForSeconds(0.1f);
 
             enemyCount += 1;

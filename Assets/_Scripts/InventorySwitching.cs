@@ -123,7 +123,8 @@ public class InventorySwitching : MonoBehaviour
             }
             if (gameObject.name.Equals("Bottle_Mana") || gameObject.name.Equals("Bottle_Mana(Clone)"))
             {
-                other.GetComponent<Player>().health += 100; 
+                UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController.JumpForce = 60f;
+                Debug.Log(UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController.JumpForce); 
                 Destroy(gameObject);
             }
     }

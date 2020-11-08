@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Fire
   - Enemy
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -15,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Weapons
+  - 
+  - 
   - 
   - 
   - 

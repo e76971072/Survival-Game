@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public float health = 100f;
     public float lookRadius = 20f;
-    public float damage = 5f;
+    public float damage = 1f;
 
     Transform target;
     NavMeshAgent agent;

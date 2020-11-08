@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 800
   lookRadius: 200
-  damage: 15
+  damage: 5
   anim: {fileID: 3552620384273700553}
 --- !u!54 &7109571089590450893
 Rigidbody:
